@@ -1,0 +1,5 @@
+Implement a simple container of Integer value to the container, with following operation.
+ADD < value> should add the specified integer value to the container. Returns an empty string
+EXISTS svalue> should check whether the specific integer value! exists in the container. Returns "true" if the value exists, "false" otherwise.
+REMOVE ‹value> should remove a single occurrence of the specified value from the container. If the value has multiple occurrences, only one of them should be removed.
+GET_NEXT < value > should return the minimal integer in the container that is strictly greater than the provided value. In case there is no such integer in the container, retum empty string.
