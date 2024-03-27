@@ -1,0 +1,7 @@
+The program starts with an empty container.
+
+ADD <value> should add the specified integer value to the container.
+
+DELETE <value> should attempt to remove the specified integer value from the container. If the value is present in the container, remove it and return True, otherwise, return False.
+
+GET_MEDIAN should return the median integer - the integer value in the middle of the sequence after all integer value stored in the container are sorted from smallest to largest. If the length of the sequence is even, the leftmost integer from the two middle integers should be returned. If the container is empty, this method should raise a runtime exception.
