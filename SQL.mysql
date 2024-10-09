@@ -1,17 +1,16 @@
 CREATE PROCEDURE solution()
 BEGIN
-	UPDATE seats s
+    UPDATE seats s
     JOIN requests r ON s.seat_no = r.seat_no
     SET s.status = CASE
-	WHEN r.request = 1 THEN 1  
+    WHEN r.request = 1 THEN 1  
     WHEN r.request = 2 THEN 2 END, s.person_id = r.person_id   
-    
-	WHERE s.status = 0 AND r.request IN (1, 2);          
+    WHERE s.status = 0 AND r.request IN (1, 2);          
 
     UPDATE seats s
     JOIN requests r ON s.seat_no = r.seat_no
     SET s.status = 2  
-	WHERE r.request = 2 AND s.status = 1 AND s.person_id = r.person_id;  
+    WHERE r.request = 2 AND s.status = 1 AND s.person_id = r.person_id;  
 
     SELECT seat_no, status, person_id FROM seats ORDER BY seat_no;
 
