@@ -13,5 +13,4 @@ BEGIN
     WHERE r.request = 2 AND s.status = 1 AND s.person_id = r.person_id;  
 
     SELECT seat_no, status, person_id FROM seats ORDER BY seat_no;
-
 END;
